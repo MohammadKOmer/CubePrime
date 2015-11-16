@@ -41,6 +41,8 @@ extern int now;
 extern int then;
 extern Space *space;
 extern int jump;
+extern    Vec3D cameraPosition;
+ extern   Vec3D cameraRotation ;
 int obsSpawnTimer;
 int flySpawnTimer;
 int enemySpawnTimer;
@@ -77,8 +79,7 @@ int main(int argc, char *argv[])
     float r = 0;
   
     char bGameLoopRunning = 1;
-    Vec3D cameraPosition = {0,-10,2};
-    Vec3D cameraRotation = {90,0,0};
+   
     SDL_Event e;
     Obj *bgobj,*chicken;
     Sprite *bgtext;

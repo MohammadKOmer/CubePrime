@@ -13,6 +13,10 @@ extern Entity* Player;
 extern int then;
 extern int now;
 extern int jump;
+extern    Vec3D cameraPosition;
+ extern   Vec3D cameraRotation ;
+ Vec3D cameraPosition;
+ Vec3D cameraRotation ;
 int horizontalDir;
 int verticalDir;
  int leftMouseInput;
@@ -26,7 +30,10 @@ Entity *newPlayer(Vec3D position,const char *name)
 {
     Entity * ent;
     char buffer[255];
+
     int i;
+		  cameraPosition = vec3d(0,-10,2);
+     cameraRotation = vec3d(90,0,0);
     ent = entity_new();
     if (!ent)
     {
@@ -48,6 +55,7 @@ Entity *newPlayer(Vec3D position,const char *name)
 	ent->body.touch.data=ent;
 	space_add_body(space,&ent->body);
 	Player=ent;
+
     return ent;
 }
 
@@ -65,6 +73,7 @@ void playerThink(Entity *self)
 	}
 	self->body.velocity.x=horizontalDir*speed;
 	self->body.velocity.y=verticalDir*speed;
+	vec3d_add(cameraPosition,cameraPosition,self->body.velocity);
 	
 }
 
