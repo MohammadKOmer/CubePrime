@@ -33,12 +33,14 @@
 #include <math.h>
 void set_camera(Vec3D position, Vec3D rotation);
 
-extern int inputDir;
+extern int horizontalDir;
+extern int verticalDir;
 extern int leftMouseInput;
 extern int rightMouseInput;
 extern int now;
 extern int then;
 extern Space *space;
+extern int jump;
 int obsSpawnTimer;
 int flySpawnTimer;
 int enemySpawnTimer;
@@ -130,22 +132,42 @@ int main(int argc, char *argv[])
                 }
                 else if (e.key.keysym.sym == SDLK_d)
                 {
-                   inputDir=1;
+                   horizontalDir=1;
                 }
                 else if (e.key.keysym.sym == SDLK_a)
                 {
-                    inputDir=-1;
+                    horizontalDir=-1;
                 }
+				if (e.key.keysym.sym == SDLK_w){
+					verticalDir = 1;
+				}else if (e.key.keysym.sym == SDLK_s)
+                {
+                    verticalDir=-1;
+                }
+				if(e.key.keysym.sym ==SDLK_SPACE){
+					jump=1;
+				}
 			}else if(e.type==SDL_KEYUP){
 
-				if ((e.key.keysym.sym== SDLK_d) == (SDLK_d&&inputDir==1))
+				if ((e.key.keysym.sym== SDLK_d)&&(horizontalDir==1))
                 {
-                   inputDir=0;
+                   horizontalDir=0;
                 }
-                else if ((e.key.keysym.sym == SDLK_a)&&(inputDir==-1))
+                else if ((e.key.keysym.sym == SDLK_a)&&(horizontalDir==-1))
                 {
-                    inputDir=0;
+                    horizontalDir=0;
                 }
+				if ((e.key.keysym.sym== SDLK_w)&&(verticalDir==1))
+				{
+					verticalDir=0;
+				}
+				else if ((e.key.keysym.sym == SDLK_s)&&(verticalDir==-1))
+				{
+					verticalDir=0;
+				}
+				if(e.key.keysym.sym ==SDLK_SPACE){
+					jump=0;
+				}
 			}else if(e.type==SDL_MOUSEBUTTONDOWN){
 				if(e.button.button==SDL_BUTTON_LEFT){
 					leftMouseInput=1;
@@ -161,7 +183,7 @@ int main(int argc, char *argv[])
 					rightMouseInput=0;
 				}
 			}
-			//slog("%i\n",inputDir);
+			//slog("%i\n",jump);
         }
 
         graphics3d_frame_begin();

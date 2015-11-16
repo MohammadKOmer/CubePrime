@@ -4,18 +4,22 @@
 #include "space.h"
 #include "graphics3d.h"
 extern Space *space;
-extern int inputDir;
+extern int horizontalDir;
+extern int verticalDir;
 extern int attackDir;
 extern int leftMouseInput;
 extern int rightMouseInput;
 extern Entity* Player;
 extern int then;
 extern int now;
-int inputDir;
+extern int jump;
+int horizontalDir;
+int verticalDir;
  int leftMouseInput;
  int rightMouseInput;
 int attackDir;
 int timeTillNextBullet;
+int jump;
 
 Entity* Player;
 Entity *newPlayer(Vec3D position,const char *name)
@@ -51,15 +55,16 @@ void playerThink(Entity *self)
 {
 	float speed;
 	speed=0.3;
-	if(self->body.position.x<-3&&inputDir==-1){
+	if(self->body.position.x<-3&&horizontalDir==-1){
 		speed=0;
-	}else if(self->body.position.x>3&&inputDir==1){
+	}else if(self->body.position.x>3&&horizontalDir==1){
 		speed=0;
 	}
-	if(inputDir!=0){
-		attackDir=inputDir;
+	if(horizontalDir!=0){
+		attackDir=horizontalDir;
 	}
-	self->body.velocity.x=inputDir*speed;
+	self->body.velocity.x=horizontalDir*speed;
+	self->body.velocity.y=verticalDir*speed;
 	
 }
 
