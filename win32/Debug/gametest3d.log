@@ -1,145 +1,45 @@
-﻿Build started 11/16/2015 3:00:59 PM.
-     1>Project "C:\Users\mkash\Desktop\3d gamedev\CubePrime\win32\gametest3d.vcxproj" on node 2 (rebuild target(s)).
-     1>_PrepareForClean:
-         Deleting file "Debug\gametest3d.lastbuildstate".
+﻿Build started 12/2/2015 3:28:42 PM.
+     1>Project "C:\Users\mkash\Desktop\3d gamedev\CubePrime\win32\gametest3d.vcxproj" on node 2 (build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-       InitializeBuildStatus:
-         Touching "Debug\gametest3d.unsuccessfulbuild".
+     1>InitializeBuildStatus:
+         Creating "Debug\gametest3d.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\body.c ..\src\collisions.c ..\src\enemy.c ..\src\entity.c ..\src\gametest3d.c ..\src\graphics3d.c ..\src\mgl_callback.c ..\src\model.c ..\src\obj.c ..\src\player.c ..\src\shader.c ..\src\simple_logger.c ..\src\space.c ..\src\sprite.c ..\src\vector.c
-         vector.c
-         sprite.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\sprite.c(17): warning C4013: 'atexit' undefined; assuming extern returning int
-         space.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\space.c(34): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-         simple_logger.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\simple_logger.c(21): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\simple_logger.c(25): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\simple_logger.c(27): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'void (__cdecl *)(void)'
-         shader.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\shader.c(54): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\shader.c(60): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\shader.c(83): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\shader.c(86): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\shader.c(89): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\player.c
          player.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(51): warning C4013: 'sprintf' undefined; assuming extern returning int
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(34): warning C4101: 'i' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(32): warning C4101: 'buffer' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(65): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(92): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(92): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(92): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(92): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(92): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(92): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(92): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(92): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(92): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(84): warning C4101: 'i' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(83): warning C4101: 'buffer' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(109): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(125): warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(143): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(143): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(143): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(143): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(143): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(143): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(143): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(143): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(143): warning C4305: 'function' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(135): warning C4101: 'i' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(134): warning C4101: 'buffer' : unreferenced local variable
-         obj.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\obj.c(15): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'void (__cdecl *)(void)'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\obj.c(103): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\obj.c(197): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\obj.c(211): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\obj.c(223): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\obj.c(232): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\obj.c(252): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : see declaration of 'fscanf'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\obj.c(327): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\obj.c(380): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\obj.c(446): warning C4018: '<' : signed/unsigned mismatch
-         model.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\model.c(15): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'void (__cdecl *)(void)'
-         mgl_callback.c
-         graphics3d.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\graphics3d.c(31): warning C4013: 'atexit' undefined; assuming extern returning int
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\graphics3d.c(140): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\graphics3d.c(140): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\graphics3d.c(140): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\graphics3d.c(146): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\graphics3d.c(146): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\graphics3d.c(146): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\graphics3d.c(166): warning C4305: 'function' : truncation from 'double' to 'GLfloat'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\graphics3d.c(167): warning C4305: 'function' : truncation from 'double' to 'GLfloat'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\graphics3d.c(168): warning C4305: 'function' : truncation from 'double' to 'GLfloat'
-         gametest3d.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\gametest3d.c(64): warning C4244: 'function' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\gametest3d.c(71): warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\gametest3d.c(84): warning C4101: 'chicken' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\gametest3d.c(84): warning C4101: 'bgobj' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\gametest3d.c(85): warning C4101: 'bgtext' : unreferenced local variable
-         entity.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\entity.c(22): warning C4013: 'atexit' undefined; assuming extern returning int
-         enemy.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(26): warning C4033: 'newCube' must return a value
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(32): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(36): warning C4013: 'sprintf' undefined; assuming extern returning int
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(18): warning C4101: 'i' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(17): warning C4101: 'buffer' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(85): warning C4033: 'newSwordsmen' must return a value
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(77): warning C4101: 'i' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(76): warning C4101: 'buffer' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(105): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(107): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(158): warning C4033: 'newFlying' must return a value
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(168): warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(168): warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(168): warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(150): warning C4101: 'i' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(149): warning C4101: 'buffer' : unreferenced local variable
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(182): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(184): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(186): warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(191): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(193): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(195): warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(200): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(202): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(204): warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(205): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-         collisions.c
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\collisions.c(57): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\collisions.c(58): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\collisions.c(59): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\collisions.c(63): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\collisions.c(64): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\collisions.c(65): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\collisions.c(66): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\collisions.c(67): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\collisions.c(68): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-         body.c
-         Generating Code...
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(43): warning C4715: 'newCube' : not all control paths return a value
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(101): warning C4715: 'newSwordsmen' : not all control paths return a value
-     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\enemy.c(178): warning C4715: 'newFlying' : not all control paths return a value
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(61): warning C4013: 'sprintf' undefined; assuming extern returning int
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(44): warning C4101: 'i' : unreferenced local variable
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(42): warning C4101: 'buffer' : unreferenced local variable
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(79): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(95): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(96): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(97): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(98): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(101): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(102): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(119): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(119): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(119): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(119): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(119): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(119): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(119): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(119): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(119): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(111): warning C4101: 'i' : unreferenced local variable
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(110): warning C4101: 'buffer' : unreferenced local variable
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(136): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(152): warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(170): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(170): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(170): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(170): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(170): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(170): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(170): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(170): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(170): warning C4305: 'function' : truncation from 'double' to 'float'
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(162): warning C4101: 'i' : unreferenced local variable
+     1>c:\users\mkash\desktop\3d gamedev\cubeprime\src\player.c(161): warning C4101: 'buffer' : unreferenced local variable
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\gametest3d.exe" /NOLOGO SDL2.lib SDL2main.lib opengl32.lib glew32.lib SDL2_image.lib glew32s.lib glu32.lib "gio-2.0.lib" "gobject-2.0.lib" "gthread-2.0.lib" "gmodule-2.0.lib" "glib-2.0.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\gametest3d.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\mkash\Desktop\3d gamedev\CubePrime\gametest3d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\gametest3d.lib" /MACHINE:X86 Debug\body.obj
          Debug\collisions.obj
@@ -156,6 +56,7 @@
          Debug\space.obj
          Debug\sprite.obj
          Debug\vector.obj
+         LINK : ..\gametest3d.exe not found or not built by the last incremental link; performing full link
      1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
          gametest3d.vcxproj -> C:\Users\mkash\Desktop\3d gamedev\CubePrime\win32\..\gametest3d.exe
        Manifest:
@@ -163,8 +64,8 @@
        FinalizeBuildStatus:
          Deleting file "Debug\gametest3d.unsuccessfulbuild".
          Touching "Debug\gametest3d.lastbuildstate".
-     1>Done Building Project "C:\Users\mkash\Desktop\3d gamedev\CubePrime\win32\gametest3d.vcxproj" (rebuild target(s)).
+     1>Done Building Project "C:\Users\mkash\Desktop\3d gamedev\CubePrime\win32\gametest3d.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.67
+Time Elapsed 00:00:00.52

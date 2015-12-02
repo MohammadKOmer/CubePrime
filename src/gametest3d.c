@@ -43,6 +43,8 @@ extern Space *space;
 extern int jump;
 extern    Vec3D cameraPosition;
  extern   Vec3D cameraRotation ;
+ extern int mouseX;
+extern int mouseY;
 int obsSpawnTimer;
 int flySpawnTimer;
 int enemySpawnTimer;
@@ -53,18 +55,7 @@ void spawnForThisTick(){
 	obsSpawnTimer-= 33;
 	flySpawnTimer-= 33;
 	enemySpawnTimer-= 33;
-	if(obsSpawnTimer<0){
-		newCube(vec3d((float)rand()/((float)RAND_MAX/6)-3
-			,10,0),"Box");
-		obsSpawnTimer=(rand()%40)*difficultyMod;
-		difficultyMod--;
-	}
-	if(enemySpawnTimer<0){
-		Entity* sword=newSwordsmen(vec3d(((rand()%2)*2-1)*4
-			,0,0),"swords");
-		slog("%f sword x",sword->body.position.x);
-		enemySpawnTimer=(rand()%40)*difficultyMod;
-	}
+
 	if(flySpawnTimer<0){
 		newFlying( vec3d((float)rand()/((float)RAND_MAX/6)-3,
 		(float)rand()/((float)RAND_MAX/5)+2,
@@ -119,6 +110,8 @@ int main(int argc, char *argv[])
         {
             space_do_step(space);
         }
+		SDL_GetRelativeMouseState(&mouseX,&mouseY);
+
         while ( SDL_PollEvent(&e) ) 
         {
             if (e.type == SDL_QUIT)

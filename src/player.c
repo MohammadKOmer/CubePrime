@@ -3,6 +3,9 @@
 #include "player.h"
 #include "space.h"
 #include "graphics3d.h"
+#include <math.h>
+
+
 extern Space *space;
 extern int horizontalDir;
 extern int verticalDir;
@@ -13,10 +16,14 @@ extern Entity* Player;
 extern int then;
 extern int now;
 extern int jump;
+extern int mouseX;
+extern int mouseY;
 extern    Vec3D cameraPosition;
  extern   Vec3D cameraRotation ;
  Vec3D cameraPosition;
- Vec3D cameraRotation ;
+ Vec3D cameraRotation;
+ float cameraHorizontalAngle;
+ float cameraVerticalAngle;
 int horizontalDir;
 int verticalDir;
  int leftMouseInput;
@@ -24,6 +31,9 @@ int verticalDir;
 int attackDir;
 int timeTillNextBullet;
 int jump;
+int mouseX;
+int mouseY;
+#define PI 3.14159265
 
 Entity* Player;
 Entity *newPlayer(Vec3D position,const char *name)
@@ -55,26 +65,43 @@ Entity *newPlayer(Vec3D position,const char *name)
 	ent->body.touch.data=ent;
 	space_add_body(space,&ent->body);
 	Player=ent;
-
+	
+	
+	cameraHorizontalAngle=0;
+	cameraVerticalAngle=0;
     return ent;
 }
 
 void playerThink(Entity *self)
 {
-	float speed;
+	float speed,sensitivity,camDist;
+	sensitivity = .5;
 	speed=0.3;
-	if(self->body.position.x<-3&&horizontalDir==-1){
-		speed=0;
-	}else if(self->body.position.x>3&&horizontalDir==1){
-		speed=0;
-	}
+	camDist=10;
 	if(horizontalDir!=0){
 		attackDir=horizontalDir;
 	}
-	self->body.velocity.x=horizontalDir*speed;
-	self->body.velocity.y=verticalDir*speed;
-	vec3d_add(cameraPosition,cameraPosition,self->body.velocity);
 	
+
+
+	vec3d_add(self->rotation,self->rotation,vec3d(0,-mouseX*sensitivity,0));
+	if(self->rotation.y>360){
+		self->rotation.y-=360;
+	}else if (self->rotation.y<0){
+		self->rotation.y=360-self->rotation.y;
+	}
+	
+
+	 self->body.velocity.x=horizontalDir*speed*cos(self->rotation.y* PI / 180.0);
+	 self->body.velocity.y=horizontalDir*speed*sin(self->rotation.y* PI / 180.0);
+	self->body.velocity.x+=verticalDir*speed*cos((self->rotation.y+90)* PI / 180.0);
+	self->body.velocity.y+=verticalDir*speed*sin((self->rotation.y+90)* PI / 180.0);
+	
+	cameraRotation.z=self->rotation.y;
+	cameraPosition.x=self->body.position.x+camDist*sin(self->rotation.y* PI / 180.0);//s (x0 + r cos theta, y0 + r sin theta).
+	cameraPosition.y=self->body.position.y-camDist*cos(self->rotation.y* PI / 180.0);
+	slog("%f, x:%f,  y:%f",self->rotation.y,self->body.velocity.x,self->body.velocity.y);
+
 }
 
 Entity *newCrosshair(Vec3D position,const char *name){
@@ -105,14 +132,14 @@ Entity *newCrosshair(Vec3D position,const char *name){
     return ent;
 }
 void crossHairThink(Entity *self){
-	int x,z;
+
 	float speed = .005;
-	SDL_GetRelativeMouseState(&x,&z);
+	
 //	slog("%f , %f",self->body.position.x,self->body.position.z);
 
 	timeTillNextBullet -= 33;
-	self->body.velocity.x=speed *x;
-	self->body.velocity.z=-speed *z;
+	self->body.velocity.x=speed *mouseX;
+	self->body.velocity.z=-speed *mouseY;
 	if(((self->body.position.x>3)&&(self->body.velocity.x>0))||
 		((self->body.position.x<-3)&&(self->body.velocity.x<0))){
 		self->body.velocity.x=0;
