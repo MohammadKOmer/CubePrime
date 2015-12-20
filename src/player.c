@@ -77,7 +77,7 @@ void playerThink(Entity *self)
 	float speed,sensitivity,camDist;
 	sensitivity = .5;
 	speed=0.3;
-	camDist=10;
+	camDist=1;
 	if(horizontalDir!=0){
 		attackDir=horizontalDir;
 	}
@@ -97,9 +97,21 @@ void playerThink(Entity *self)
 	self->body.velocity.x+=verticalDir*speed*cos((self->rotation.y+90)* PI / 180.0);
 	self->body.velocity.y+=verticalDir*speed*sin((self->rotation.y+90)* PI / 180.0);
 	
+	
+	if(jump){
+		self->body.velocity.z+=.2;
+	}else{
+		self->body.velocity.z-=.2;
+		if(self->body.position.z<=0){
+			self->body.velocity.z=0;
+			self->body.position.z=0;
+		}
+	}
+	
 	cameraRotation.z=self->rotation.y;
 	cameraPosition.x=self->body.position.x+camDist*sin(self->rotation.y* PI / 180.0);//s (x0 + r cos theta, y0 + r sin theta).
 	cameraPosition.y=self->body.position.y-camDist*cos(self->rotation.y* PI / 180.0);
+	cameraPosition.z=self->body.position.z+2;
 	slog("%f, x:%f,  y:%f",self->rotation.y,self->body.velocity.x,self->body.velocity.y);
 
 }

@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="..\src\body.c" />
     <ClCompile Include="..\src\collisions.c" />
+    <ClCompile Include="..\src\editor.c" />
     <ClCompile Include="..\src\enemy.c" />
     <ClCompile Include="..\src\entity.c" />
     <ClCompile Include="..\src\gametest3d.c" />
@@ -30,6 +31,7 @@
   <ItemGroup>
     <ClInclude Include="..\include\body.h" />
     <ClInclude Include="..\include\collisions.h" />
+    <ClInclude Include="..\include\editor.h" />
     <ClInclude Include="..\include\enemy.h" />
     <ClInclude Include="..\include\entity.h" />
     <ClInclude Include="..\include\graphics3d.h" />

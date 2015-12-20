@@ -221,11 +221,38 @@ void flyingCallback(void *data, void *context)
 		
 			space_remove_body(space,&me->body);
 			entity_free(me);
-		//	slog("left mouse input is %i ",leftMouseInput);
-		//	slog("attackDir is %i ",attackDir);
 		}
       
     }
 }
 
-
+Entity *newGeometry(Vec3D position,Vec3D scale, Vec4D color,const char *name)
+{
+    Entity * ent;
+    char buffer[255];
+    int i;
+    ent = entity_new();
+    if (!ent)
+    {
+        return NULL;
+    }
+    if (!ent)
+    {
+        return;
+    }
+    ent->objModel = obj_load("models/cube.obj");
+    ent->texture = LoadSprite("models/cube_text.png",1024,1024);
+	vec3d_cpy(ent->scale,scale);
+	ent->type=FLYING;
+	vec3d_cpy(ent->body.position,position);
+	ent->color=color;
+    cube_set(ent->body.bounds,-scale.x,-scale.y,-scale.z,scale.x*2,scale.y*2,scale.z*2);
+    ent->rotation.x = 90;
+    sprintf(ent->name,"%s",name);
+    ent->think = flyingThink;
+    ent->state = 0;
+    //mgl_callback_set(&ent->body.touch,flyingCallback,ent);
+	ent->body.touch.data=ent;
+	space_add_body(space,&ent->body);
+    return ent;
+}
